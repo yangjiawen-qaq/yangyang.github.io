@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Live2D</title>
+<style>
+ *
+ {
+     padding:0px;
+     margin:0px;
+ }
+ body
+ {
+     height: 2000px;
+     width: 100%;
+     border:1px solid red;
+ }
+#pic
+{
+    margin:0 auto;
+    width: 1000px;
+    height: 600px;
+    border:1px solid red;
+    overflow: hidden;
+}
+#pic li
+{
+   
+    display: block;
+    list-style-type: none;
+    width: 200px;
+    height: 600px;
+    float:left;
+    transition: all 1s;
+    display: block;
+
+}
+#pic:hover li
+{
+    width: 50px;
+}
+#pic li:hover 
+{
+    width: 800px;
+}
+
+</style>
+<script>
+
+</script>
+</head>
+<body>
+    <script type="text/javascript" charset="utf-8"  src="L2D.js"></script>
+    <script type="text/javascript" charset="utf-8"  src="L2Dmin.js"></script>
+    <script type="text/javascript">
+        L2Dwidget.init({"display": {
+            "superSample": 2,
+            "width": 200,
+            "height": 400,
+                 "position": "left",
+                     "hOffset": 0,
+            "vOffset": 0
+              }
+         });
+    </script>
+        <div id="pic">
+            <ul>
+                <li><img src="D://vscode/初音.jpg" />
+        
+                </li>
+                <li><img src="D://vscode/古风.jpg" />
+        
+                </li>
+                <li><img src="D://vscode/大橘已定+.jpg" />
+        
+                </li>
+                <li><img src="D://vscode/紫罗兰.jpg" />
+        
+                </li>
+                <li><img src="D://vscode/蕾姆2.jpg" />
+        
+                </li>
+                <ul>
+        </div>
+</body>
+</html>
