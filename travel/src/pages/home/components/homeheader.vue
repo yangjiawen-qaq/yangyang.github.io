@@ -7,16 +7,24 @@
   <div class="header-input">
      <span class="iconfont">&#xe647;</span>
     请输入城市景点/地区</div>
+  <router-link to='/city'>
   <div class="header-right">
-    城市
+    {{this.currentcity}}
     <span class="iconfont">&#xe60a;</span>
   </div>
+  </router-link>
 </div>
 </div>
 </template>
 <script>
+import {mapState} from 'vuex'
 export default{
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  computed: {
+    ...mapState({
+      currentcity: 'city'
+    })
+  }
 }
 </script>
 <style lang="stylus" scoped>
@@ -41,8 +49,10 @@ export default{
 }
  .header-right
  {
-  width :1.23rem;
+  min-width :1.04rem;
+  padding:0 .2rem;
   float:right;
+  color:#fff;
   text-align :center;
  }
  .header-input

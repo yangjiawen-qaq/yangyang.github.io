@@ -1,12 +1,12 @@
 <template>
 <div class="icons">
-   <swiper>
+   <swiper :options="swiperOptions">
       <swiper-slide v-for="(page,index) of pages" :key="index">
          <div class="icon"  v-for="item of page" :key="item.id">
             <div class="icon-img">
-            <img class="ico" :src="item.iconurl">
+            <img class="ico" :src="item.imgUrl">
             </div>
-            <div class='text' v-text="item.text"></div>
+            <div class='text' v-text="item.desc"></div>
          </div>
       </swiper-slide>
    </swiper>
@@ -15,60 +15,21 @@
 <script>
 export default {
   name: 'IconFont',
+  props: {
+    List: Array
+  },
   data () {
     return {
-      iconlist: [{
-        id: '01',
-        iconurl: 'http://img1.imgtn.bdimg.com/it/u=289000593,52298680&fm=26&gp=0.jpg',
-        text: '滑雪'
-      },
-      {
-        id: '02',
-        iconurl: 'http://img1.imgtn.bdimg.com/it/u=289000593,52298680&fm=26&gp=0.jpg',
-        text: 'bilibili'
-      },
-      {
-        id: '02',
-        iconurl: 'http://img1.imgtn.bdimg.com/it/u=289000593,52298680&fm=26&gp=0.jpg',
-        text: 'bilibili'
-      },
-      {
-        id: '02',
-        iconurl: 'http://img1.imgtn.bdimg.com/it/u=289000593,52298680&fm=26&gp=0.jpg',
-        text: 'bilibili'
-      },
-      {
-        id: '02',
-        iconurl: 'http://img1.imgtn.bdimg.com/it/u=289000593,52298680&fm=26&gp=0.jpg',
-        text: 'bilibili'
-      },
-      {
-        id: '02',
-        iconurl: 'http://img1.imgtn.bdimg.com/it/u=289000593,52298680&fm=26&gp=0.jpg',
-        text: 'bilibili'
-      },
-      {
-        id: '02',
-        iconurl: 'http://img1.imgtn.bdimg.com/it/u=289000593,52298680&fm=26&gp=0.jpg',
-        text: 'bilibili'
-      },
-      {
-        id: '02',
-        iconurl: 'http://img1.imgtn.bdimg.com/it/u=289000593,52298680&fm=26&gp=0.jpg',
-        text: 'bilibili'
-      },
-      {
-        id: '02',
-        iconurl: 'http://img1.imgtn.bdimg.com/it/u=289000593,52298680&fm=26&gp=0.jpg',
-        text: 'bilibili'
-      }]
+      swiperOptions: {
+        autoplay: false
+      }
     }
   },
   computed: {
     // eslint-disable-next-line vue/return-in-computed-property
     pages () {
       const pages = []
-      this.iconlist.forEach((item, index) => {
+      this.List.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
@@ -93,7 +54,6 @@ export default {
     height :0;
     overflow:hidden;
     padding-bottom :50%;
-    background:#ccc;
     .icon
     {
         position relative;
@@ -110,8 +70,8 @@ export default {
               overflow: hidden;
               .ico
               {
-                  height 100%;
-                  width 90%;
+                  height 70%;
+                  width 70%;
                   display block;
                   margin 0 auto;
               }

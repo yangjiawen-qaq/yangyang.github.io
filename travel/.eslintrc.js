@@ -1,5 +1,5 @@
 // https://eslint.org/docs/user-guide/configuring
-/*
+
 module.exports = {
   root: true,
   parserOptions: {
@@ -27,7 +27,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
 }
-*/
+/*
 module.exports = {
   root: true,
   env: {
@@ -55,3 +55,4 @@ module.exports = {
       'vue/no-parsing-error':false
   }
 }
+*/
