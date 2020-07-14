@@ -6,7 +6,7 @@
     :key="item"
     :ref="item"
     @click="slideclick"
-    @touchstart="touchstart"
+    @touchstart.prevent="touchstart"
     @touchmove="touchmove"
     @touchend="touchend"
     >

@@ -6,6 +6,13 @@
   "description": "travel图标",
   "glyphs": [
     {
+      "icon_id": "6446151",
+      "name": "图片",
+      "font_class": "tianchongxing-",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
       "icon_id": "13474459",
       "name": "下箭头",
       "font_class": "xiajiantou",
